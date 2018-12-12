@@ -1,3 +1,17 @@
 <p>
-  craps works!
+  &nbsp;
 </p>
+
+<div class="row">
+  <div class="col-md-offset-2 col-md-10 bet-field" id="passLine" (click)="passLineClick()">
+    <p>Pass Line</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-2 col-md-10 bet-field" id="rollDice" (click)="rollDiceClick()">
+    <p>Roll Dice</p>
+  </div>
+</div>
+<p>Bank: {{bank}} || Current Bet: {{currentBet()}}</p>
+<p>Dice roll: {{diceA.number}}  - {{diceB.number}}</p>
+<p>Point: {{point}}

@@ -1,0 +1,8 @@
+.bet-field {
+    background: lightgreen;
+    border: solid 1px #000000;
+}
+
+.bet-field:hover {
+    background: green;
+}
