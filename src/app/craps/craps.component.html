@@ -13,5 +13,5 @@
   </div>
 </div>
 <p>Bank: {{bank}} || Current Bet: {{currentBet()}}</p>
-<p>Dice roll: {{diceA.number}}  - {{diceB.number}}</p>
+<app-dice [die]="diceA"></app-dice><app-dice [die]="diceB"></app-dice>
 <p>Point: {{point}}
