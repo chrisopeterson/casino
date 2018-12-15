@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Bet, PassLineBet } from '../models/bet'
+import { Bet, PassLineBet, DontPassLineBet } from '../models/bet'
 import { Dice } from '../models/dice'
 
 @Component({
@@ -37,9 +37,13 @@ export class CrapsComponent implements OnInit {
 
   // events
   passLineClick() : void {
-
     this.bank -= 5;
     this.bets.push(new PassLineBet(5));
+  }
+
+  dontPassLineClick() : void {
+    this.bank -= 5;
+    this.bets.push(new DontPassLineBet(5));
   }
 
   rollDiceClick() : void {
@@ -70,12 +74,14 @@ export class CrapsComponent implements OnInit {
 
         // 7 out - clear all bets
       if(roll === 7) {
+        this.payBets("Dont Pass");
+        this.removeBets("Pass Line");
         this.point = 0;
-        this.bets.length= 0;
       }
 
       if(roll === this.point) {
         this.payBets("Pass Line");
+        this.removeBets("Dont Pass");
         this.point = 0;
       }
     }

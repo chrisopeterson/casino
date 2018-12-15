@@ -25,3 +25,13 @@ export class PassLineBet extends Bet {
         this.name = "Pass Line";
     }
 }
+
+export class DontPassLineBet extends Bet {
+    constructor(amount: number) {
+        super(amount);
+
+        this.payout = 1;
+        this.canBeTakenDown = false;
+        this.name = "Dont Pass";
+    }
+}
