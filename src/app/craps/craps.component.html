@@ -3,47 +3,38 @@
 </p>
 
 <div id="board">
-  <table id="layout">
-      <tbody>
-        <tr>
-          <td class="bet-field top-left">pass</td>
-          <td class="bet-field" style="border-bottom: none;">dont pass</td>
-          <td class="bet-field">dont come bar</td>
-          <td class="bet-field">place 4</td>
-          <td class="bet-field">place 5</td>
-          <td class="bet-field">place 6</td>
-          <td class="bet-field">place 8</td>
-          <td class="bet-field">place 9</td>
-          <td class="bet-field">place 10</td>
-        </tr>
-        <tr>
-          <td class="bet-field">pass</td>
-          <td class="bet-field" style="border-bottom: none; border-top: none;">dont pass</td>
-          <td colspan="7"  class="bet-field">Come</td>
-        </tr>
-        <tr>
-          <td class="bet-field">pass</td>
-          <td  class="bet-field">dont pass</td>
-          <td colspan="7" class="bet-field" (click)="fieldBetClick()">Field</td>
-        </tr>
-        <tr>
-          <td class="bet-field">pass</td>
-          <td colspan="8" class="bet-field bottom-left" (click)="dontPassLineClick()">dont pass</td>
-        </tr>
-        <tr>
-          <td colspan="9" class="bet-field bottom-left" (click)="passLineClick()">pass</td>
-        </tr>
-      </tbody>
-  </table>
+  <div id="layout">
+    <div class="row">
+      <div class="col-md-6 bet-field layout-top-left">don't come bar</div>
+      <div class="col-md-1 bet-field">place 4</div>
+      <div class="col-md-1 bet-field">place 5</div>
+      <div class="col-md-1 bet-field">place 6</div>
+      <div class="col-md-1 bet-field">place 8</div>
+      <div class="col-md-1 bet-field">place 9</div>
+      <div class="col-md-1 bet-field layout-top-right">place 10</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 bet-field">Come</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 bet-field" (click)="fieldBetClick()">Field</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 bet-field" (click)="dontPassLineClick()">dont pass</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 bet-field layout-bottom" (click)="passLineClick()">pass</div>
+    </div>
+  </div>
 </div>
 
 <br />
 
 <div class="row">
-  <div class="col-md-offset-2 col-md-10 bet-field" id="rollDice" (click)="rollDiceClick()">
+  <div class="col-md-offset-2 col-md-10" id="rollDice" (click)="rollDiceClick()">
     <p>Roll Dice</p>
   </div>
 </div>
 <p>Bank: {{bank}} || Current Bet: {{currentBet()}}</p>
 <app-dice [die]="diceA"></app-dice><app-dice [die]="diceB"></app-dice>
-<p>Point: {{point}}
+<p>Point: {{point}}</p>
