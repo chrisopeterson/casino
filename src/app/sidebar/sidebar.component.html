@@ -1,0 +1,11 @@
+<nav id="sidebar">
+    <div id="sidebar-wrap">
+        <h3>Current Bets</h3>
+
+        <ul class="list-unstyled components" *ngFor="let bet of bets">
+            <li>
+                {{bet.name}} - {{bet.amount}}
+            </li>
+        </ul>
+    </div>
+</nav>

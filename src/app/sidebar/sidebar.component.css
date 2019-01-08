@@ -1,0 +1,11 @@
+
+#sidebar {
+    background: #7386D5;
+    color: #fff;
+    display: block;
+}
+
+#sidebar-wrap {
+    width: 80%;
+    margin: 0 auto;
+}

@@ -1,9 +1,11 @@
 /* Layout */
+
 #board {
     background: #478d47;
     border: solid 1px #000000;
     border-radius: 20px;
     padding: 20px;
+    margin-right: 20px;
 }
 
 #board .row {
@@ -20,6 +22,12 @@
 .bet-field {
     border: solid 1px #000000;
     min-height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+#rollDice {
+    border: solid 1px #000000;
 }
 
 .bet-field:hover {
